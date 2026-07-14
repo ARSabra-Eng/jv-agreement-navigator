@@ -291,7 +291,36 @@ a:focus-visible {
 .local-note span { display: flex; flex-direction: column; }
 .local-note strong { font-size: 11px; font-weight: 600; color: #e7eef5; }
 .local-note small { margin-top: 3px; font-size: 9px; color: #8495aa; }
+.nav-reset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% - 40px);
+  margin: 0 20px 18px;
+  padding: 10px 12px;
+  color: #d8e2ed;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
 
+.nav-reset:hover {
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.30);
+}
+
+.nav-reset svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .main-content {
   grid-column: 2;
   min-width: 0;
