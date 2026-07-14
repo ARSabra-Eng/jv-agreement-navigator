@@ -2,65 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Offline preparation workspace for pre-tender and post-tender Joint Venture agreements.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Preparation workspace for pre-tender and post-tender Joint Venture agreements."
+  >
+
   <title>JV Agreement Navigator</title>
+
+  <link rel="icon" type="image/png" href="kae-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
 
   <header class="topbar">
     <div class="brand-wrap">
-        <img src="kae-logo.png" alt="Kramer Albrecht Engineering logo">
-   </div>   
-      <button class="icon-button mobile-menu" type="button" data-action="toggle-nav" aria-label="Open workflow navigation">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+
+      <button
+        class="icon-button mobile-menu"
+        type="button"
+        data-action="toggle-nav"
+        aria-label="Open workflow navigation"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
       </button>
-      <div class="brand-mark" aria-hidden="true">JV</div>
+
+      <div class="brand-mark">
+        <img
+          src="kae-logo.png"
+          alt="Kramer Albrecht Engineering logo"
+        >
+      </div>
+
       <div class="brand-copy">
         <strong>JV Agreement Navigator</strong>
-        <span>Pre-tender &amp; post-tender agreement workspace</span>
+        <span>
+          Pre-tender &amp; post-tender agreement workspace
+        </span>
       </div>
+
     </div>
+
     <div class="topbar-actions">
-      <div class="save-state" id="save-state" aria-live="polite">
+
+      <div
+        class="save-state"
+        id="save-state"
+        aria-live="polite"
+      >
         <span class="save-dot"></span>
-        <span><strong>Saved locally</strong><small id="last-saved">Ready</small></span>
+
+        <span>
+          <strong>Saved locally</strong>
+          <small id="last-saved">Ready</small>
+        </span>
       </div>
-      <div class="mode-switch" role="group" aria-label="Agreement stage">
-        <button type="button" data-action="set-mode" data-mode="pre" aria-pressed="true">Pre-tender</button>
-        <button type="button" data-action="set-mode" data-mode="post" aria-pressed="false">Post-tender</button>
+
+      <div
+        class="mode-switch"
+        role="group"
+        aria-label="Agreement stage"
+      >
+        <button
+          type="button"
+          data-action="set-mode"
+          data-mode="pre"
+          aria-pressed="true"
+        >
+          Pre-tender
+        </button>
+
+        <button
+          type="button"
+          data-action="set-mode"
+          data-mode="post"
+          aria-pressed="false"
+        >
+          Post-tender
+        </button>
       </div>
-      <button class="icon-button header-more" type="button" data-action="open-tools" aria-label="Open file tools">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+
+      <button
+        class="icon-button header-more"
+        type="button"
+        data-action="open-tools"
+        aria-label="Open file tools"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="5" r="1.5"/>
+          <circle cx="12" cy="12" r="1.5"/>
+          <circle cx="12" cy="19" r="1.5"/>
+        </svg>
       </button>
+
     </div>
   </header>
 
   <div class="app-shell">
-    <div class="nav-backdrop" data-action="toggle-nav"></div>
-    <aside class="workflow-nav" aria-label="Agreement preparation workflow">
+
+    <div
+      class="nav-backdrop"
+      data-action="toggle-nav"
+    ></div>
+
+    <aside
+      class="workflow-nav"
+      aria-label="Agreement preparation workflow"
+    >
       <nav id="step-navigation"></nav>
-      <div class="nav-progress" id="nav-progress"></div>
+
+      <div id="nav-progress" class="nav-progress"></div>
+
       <div class="local-note">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h12l3 3v15H4V3h1Zm2 0v6h9V3M8 21v-7h8v7"/></svg>
-        <span><strong>Saved on this device</strong><small>No account or external service required</small></span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 3h12l3 3v15H4V3h1Zm2 0v6h9V3M8 21v-7h8v7"/>
+        </svg>
+
+        <span>
+          <strong>Saved on this device</strong>
+          <small>
+            No account or external service required
+          </small>
+        </span>
       </div>
     </aside>
 
-    <main id="main-content" class="main-content" tabindex="-1">
+    <main
+      id="main-content"
+      class="main-content"
+      tabindex="-1"
+    >
       <div id="step-content"></div>
     </main>
 
-    <aside class="insight-rail" aria-label="Readiness and guidance">
+    <aside
+      class="insight-rail"
+      aria-label="Readiness and guidance"
+    >
       <div id="insight-content"></div>
     </aside>
+
   </div>
 
-  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
-  <div class="modal-root" id="modal-root"></div>
-  <input id="import-file" class="visually-hidden" type="file" accept="application/json,.json">
+  <div
+    class="toast-region"
+    id="toast-region"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <div
+    class="modal-root"
+    id="modal-root"
+  ></div>
+
+  <input
+    id="import-file"
+    class="visually-hidden"
+    type="file"
+    accept="application/json,.json"
+  >
 
   <script src="app.js"></script>
 </body>
