@@ -113,16 +113,12 @@ a:focus-visible {
 
 .brand-wrap { gap: 15px; min-width: 0; }
 
-.brand-mark {
-  width: 49px;
-  height: 49px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-size: 30px;
-  letter-spacing: -3px;
-  border-right: 1px solid rgba(255,255,255,.35);
-  padding-right: 13px;
+.brand-mark img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .brand-copy { align-items: flex-start; flex-direction: column; min-width: 0; }
